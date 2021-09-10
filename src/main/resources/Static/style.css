@@ -1,0 +1,45 @@
+ /* Styling */
+ /* Style the tab */
+ .tab {
+     overflow: hidden;
+     border: 1px solid #ccc;
+     background-color: antiquewhite;
+ }
+
+
+ .tab button {
+     background-color: inherit;
+     float: left;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     padding: 14px 16px;
+     transition: 0.3s;
+ }
+
+
+ .tab button:hover {
+     background-color: aqua;
+ }
+
+
+ .tab button.active {
+     background-color: cadetblue;
+ }
+
+
+ .tabContent {
+     display: none;
+     padding: 6px 12px;
+     border: 1px solid black;
+     border-top: none;
+     max-width: fit-content;
+ }
+
+ .btn{
+     text-align:right ;
+ }
+
+ .form-group{
+     align-items: center;
+ }
