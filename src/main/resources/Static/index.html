@@ -2,52 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <title>Demo Web Chat</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
 
+<header>
+    <label class="user"> UserName :</label>
+    <br>
+    <label class="Tech "> TechAssist </label>
+    <hr>
+    <hr>
+   <h2>Revature ChatRoom </h2>
+</header>
+<!--Chat Room -->
+<div class="chatRoom" >
+    <div class="fileupload">
+        <div class="tab">
+            <button class="tablinks active"  onclick="openUploader(event,  'singleUploader')"  id='defaultTab' "> Single File</button>
+            <button class="tablinks" onclick="openUploader(event, 'multiUploader')">Multiple Files</button>
+        </div>
+
+        <!-- content -->
+
+        <div class="container mt-5 tabContent" id="singleUploader"  style="display:block" >
+            <h2> Single File upload </h2>
+            <form class="mt-3" action="upload/file/single" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label> User</label>
+                    <label for="userID"> User ID</label>
+                    <input type="text" name="userID" id="userID"><br/><br/>
+                    <label>Single</label>
+                    <input type="file" name="fileToUpload"> <br/><br/>
+                </div>
+                <div class="form-group mt-3 btn">
+                    <button type="submit"  class="btn-upload btn-primary" id="submitFileBtn"> Submit </button><br/>
+                    <label name="uploadFile1"></label>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="container mt-5 tabContent" id="multiUploader" >
+            <h2>Multiple File Upload </h2>
+            <form class="mt-3" action="upload/file/multi" method="post" enctype="multipart/form-data">
+                <div class="form-group" >
+                    <label >Multiple Files Uploader</label> <br/><br/>
+                    <input type="file" name="files" id="files" multiple> <br/><br/>
+                </div>
+                <div class="form-group mt-3 btn">
+                    <button type="submit" class="btn-upload btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
 <!-- Tab Links -->
-<div class="tab">
-    <button class="tablinks active"  onclick="openUploader(event,  'singleUploader')"  id='defaultTab' "> Single File</button>
-    <button class="tablinks" onclick="openUploader(event, 'multiUploader')">Multiple Files</button>
+<div class="fileupload">
+        <div class="tab">
+            <button class="tablinks active"  onclick="openUploader(event,  'singleUploader')"  id='defaultTab' "> Single File</button>
+            <button class="tablinks" onclick="openUploader(event, 'multiUploader')">Multiple Files</button>
+        </div>
+
+        <!-- content -->
+
+        <div class="container mt-5 tabContent" id="singleUploader"  style="display:block" >
+            <h2> Single File upload </h2>
+            <form class="mt-3" action="upload/file/single" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label> User</label>
+                    <label for="userID"> User ID</label>
+                        <input type="text" name="userID" id="userID"><br/><br/>
+                    <label>Single</label>
+                        <input type="file" name="fileToUpload"> <br/><br/>
+                </div>
+                <div class="form-group mt-3 btn">
+                    <button type="submit"  class="btn-upload btn-primary" id="submitFileBtn"> Submit </button><br/>
+                    <label name="uploadFile1"></label>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="container mt-5 tabContent" id="multiUploader" >
+            <h2>Multiple File Upload </h2>
+            <form class="mt-3" action="upload/file/multi" method="post" enctype="multipart/form-data">
+                <div class="form-group" >
+                    <label >Multiple Files Uploader</label> <br/><br/>
+                    <input type="file" name="files" id="files" multiple> <br/><br/>
+                </div>
+                <div class="form-group mt-3 btn">
+                    <button type="submit" class="btn-upload btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
 </div>
-
-<!-- content -->
-
-<div class="container mt-5 tabContent" id="singleUploader"  style="display:block" >
-    <h1> Single File upload Demo!</h1>
-    <form class="mt-3" action="upload/file/single" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-            <label> User</label>
-            <label for="userID"> User ID</label>
-                <input type="text" name="userID" id="userID"><br/><br/>
-            <label>Single</label>
-                <input type="file" name="fileToUpload"> <br/><br/>
-        </div>
-        <div class="form-group mt-3 btn">
-            <button type="submit"  class="btn-upload btn-primary" id="submitFileBtn"> Submit </button><br/>
-            <label name="uploadFile1"></label>
-        </div>
-    </form>
-</div>
-
-
-<div class="container mt-5 tabContent" id="multiUploader" >
-    <h1>Multiple File Upload Demo!</h1>
-    <form class="mt-3" action="upload/file/multi" method="post" enctype="multipart/form-data">
-        <div class="form-group" >
-            <label >Multiple Files Uploader</label> <br/><br/>
-            <input type="file" name="files" id="files" multiple> <br/><br/>
-        </div>
-        <div class="form-group mt-3 btn">
-            <button type="submit" class="btn-upload btn-primary">Submit</button>
-        </div>
-    </form>
-</div>
-
 <script src="./script.js"> </script>
 </body>
 </html>

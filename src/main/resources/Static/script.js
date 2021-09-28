@@ -1,3 +1,5 @@
+
+
 function openUploader(evt, uploader) {
     // Declare all variables
     let i;

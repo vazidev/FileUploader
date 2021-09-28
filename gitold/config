@@ -1,0 +1,14 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "vazidev-fileuploader"]
+	url = https://github.com/vazidev/FileUploader.git
+	fetch = +refs/heads/*:refs/remotes/vazidev-fileuploader/*
+	url = https://github.com/vazidev/FileUploader.git
+[remote "vazidev"]
+	url = https://github.com/vazidev/FileUploader.git
+	fetch = +refs/heads/*:refs/remotes/vazidev/*
